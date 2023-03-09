@@ -1,73 +1,82 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# MovieFinder-Back
+NTT DATA  technical challenge 
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h3>The MovieFinder is a simple API that allows users to retrieve movie data from an external API. It exposes a single endpoint that returns movie data based on a query string.</h3>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  
+## Requirements:
+<h3>To run this application, you will need the following software installed on your system:</h3>
+<h3>Node.js</h3>
+<h3>NPM (Node Package Manager)</h3>
 
-## Description
+## Usage
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<h3>Open a terminal window</h3>
+<h3>Clone this repository to your local machine</h3> 
+  
+```bash
+  git clone https://github.com/wesley-franca/MovieFinder-API.git
+``` 
 
-## Installation
+<h3>navigate to the project directory</h3>
 
 ```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
+  cd MovieFinder-Back
+``` 
+  
+<h3>Run the command the following command to install the project's dependencies</h3>
 
 ```bash
-# unit tests
-$ npm run test
+  npm install
+``` 
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
+<h3>Build the application</h3>
+  
+```bash
+  npm run build
+```
+  
+<h3>Start the application by running</h3>
+
+```bash
+  npm start
 ```
 
-## Support
+## Documentation
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Route GET "/" is an status route 
+return:
+200 OK
+Content-Type: application/json
 
-## Stay in touch
+{
+    "message": "Hello world"
+}
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+=============================
 
-## License
+Route GET "/movies/:movie_name"
 
-Nest is [MIT licensed](LICENSE).
+200 OK
+
+{
+  "Title": string,
+  "Year": string,
+  "Director":  string,
+  "Actors":  string,
+  "Plot":  string,
+  "Poster":  string,
+  "imdbRating":  string,
+  "Id":  string
+}
+
+////////
+
+400 bad request 
+
+{
+  "statusCode": 404,
+  "message": "Filme não encontrado",
+  "error": "Not Found"
+}
