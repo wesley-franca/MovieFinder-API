@@ -1,5 +1,4 @@
 # MovieFinder-Back
-NTT DATA  technical challenge 
 
 <h3>The MovieFinder is a simple API that allows users to retrieve movie data from an external API. It exposes a single endpoint that returns movie data based on a query string.</h3>
 
