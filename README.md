@@ -36,6 +36,9 @@
   npm run build
 ```
   
+<h3>Create a .env file using .env.example pattern </h3>
+ 
+ 
 <h3>Start the application by running</h3>
 
 ```bash
